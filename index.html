@@ -5,188 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhavana Ellichetty - Portfolio</title>
     <style>
-        /* General Styles */
+     /* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Root Variables */
+:root {
+  --primary-color: #0077cc;
+  --secondary-color: #1e1e2f;
+  --light-color: #f9f9f9;
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --border-radius: 10px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Base Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #000000;
-    background-color: #f1f1f1;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* Headings */
 h1, h2, h3 {
-    color: #060606;
+  margin: 0 0 15px;
+  font-weight: 600;
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #f7f7f7;
-    margin-bottom: 10px;
+  font-size: 2.8rem;
+  color: var(--card-bg);
 }
 
 h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
+  font-size: 2rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid #e2e2e2;
+  padding-bottom: 8px;
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--primary-color);
 }
 
+/* Paragraphs and Lists */
 p {
-    font-size: 1rem;
-    margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
+li {
+  margin-bottom: 10px;
+}
+
+/* Links */
 a {
-    color: #64a5e6;
-    text-decoration: none;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-    text-decoration: underline;
+  color: #005fa3;
+  text-decoration: underline;
 }
 
-/* Header Styles */
+/* Header */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 3rem;
+  background: var(--primary-color);
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
 }
 
 header p {
-    margin: 0;
-    font-size: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
-/* Section Styles */
+/* Section Styling */
 section {
-    padding: 40px 0;
-    background-color: #fff;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: var(--card-bg);
+  margin: 30px 0;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s;
 }
 
-section#about {
-    background-color: #f9f9f9;
+section:hover {
+  transform: translateY(-2px);
 }
 
-section#skills ul,
-section#education ul,
-section#certifications ul,
-section#Hobbies ul {
-    list-style-type: none;
-    padding: 0;
+/* Project & Job Cards */
+.project, .job {
+  margin-bottom: 25px;
 }
 
+.project strong, .job strong {
+  color: var(--secondary-color);
+}
+
+/* Lists in Cards */
 section#skills ul li,
 section#education ul li,
 section#certifications ul li,
 section#Hobbies ul li {
-    background-color: #f4f4f4;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 4px;
+  background-color: #f0f6fb;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
 }
 
-/* Project Styles */
-.project {
-    margin-bottom: 30px;
-}
-
-.project h3 {
-    color: #0073e6;
-}
-
-.project p {
-    margin-bottom: 10px;
-}
-
-.project strong {
-    color: #333;
-}
-
-/* Internship Styles */
-.job {
-    margin-bottom: 30px;
-}
-
-.job h3 {
-    color: #0073e6;
-}
-
-.job p {
-    margin-bottom: 10px;
-}
-
-.job ul {
-    margin-left: 20px;
-}
-
-/* Contact Styles */
-section#contact {
-    background-color: #f9f9f9;
-}
-
+/* Contact Section */
 section#contact p {
-    margin-bottom: 10px;
+  font-size: 1rem;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+  background: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    h2 {
-        font-size: 1.5rem;
-    }
+  h2 {
+    font-size: 1.5rem;
+  }
 
-    h3 {
-        font-size: 1.2rem;
-    }
+  h3 {
+    font-size: 1.2rem;
+  }
 
-    .container {
-        width: 95%;
-    }
+  section {
+    padding: 30px 20px;
+  }
 }
+
         </style>
 </head>
 <body>
@@ -201,7 +179,7 @@ footer p {
         <div class="container">
             <h2>About Me</h2>
             <p>Recent Computer Science graduate with a strong foundation in programming, algorithms, and software development. 
-                Skilled in languages such as Java, Python, and C++, with hands-on experience in web development, database 
+                Skilled in languages such as Java, Python,My SQL and C, with hands-on experience in web development, database 
                 management, and debugging. Demonstrated ability to work collaboratively in team projects and adapt to new 
                 technologies quickly. Eager to contribute to innovative solutions and grow as a professional in the tech industry. </p>
         </div>
@@ -211,8 +189,9 @@ footer p {
         <div class="container">
             <h2>Technical Skills</h2>
             <ul>
-                <li>Languages: C, C++, Python, Java,SQL</li>
-                <li>Technologies: HTML, CSS,JavaScript</li>
+                <li>Languages: C, Python, Java,SQL</li>
+                <li>Technologies: HTML, CSS, JavaScript</li>
+                <li>Frameworks:Hibernate, Spring</li>
                 <li>Basic Computer Knowledge</li>
             </ul>
         </div>
@@ -222,7 +201,7 @@ footer p {
         <div class="container">
             <h2>Education</h2>
             <ul>
-                <li><strong>B. Tech in Computer Science and Engineering</strong> - Sreenivasa Institute of Technology and Management Studies, Chittoor (Pursuing)</li>
+                <li><strong>B. Tech in Computer Science and Engineering</strong> - Sreenivasa Institute of Technology and Management Studies, Chittoor- GPA: 9.0</li>
                 <li><strong>Secondary Education (MPC)</strong> - Sri Chaitanya Junior College, Chittoor - GPA: 8.5</li>
                 <li><strong>School Education (SSC)</strong> - Little Flower English Medium School, Chittoor - GPA: 9.7</li>
             </ul>
@@ -237,6 +216,10 @@ footer p {
                 <p>Developed a system for recognizing handwritten digits (0-9) using the MNIST dataset. Implemented a Convolutional Neural Network (CNN) model for image classification, achieving 92.5% accuracy. Responsibilities included data preprocessing, model training, and performance evaluation.</p>
                 <p><strong>Tools used:</strong> Python, OpenCV, TensorFlow</p>
                 <p><strong>Dataset:</strong> MNIST dataset</p>
+                <h3>Tomato Leaf Disease Detection using Deep Learning</h3>
+                <p> Built a web-based system to identify diseases in tomato plants using image classification.Implemented CNN, MobileNet, and ResNet models trained on Kaggle tomato leaf datasets.Developed a Python backend for image processing and real-time prediction.Designed a responsive frontend using HTML, CSS, and JavaScript.</p>
+                <p><strong>Tools used:</strong> Python,TensorFlow,HTMl,CSS</p>
+                <p><strong>Dataset:</strong> PlantVillage dataset</p>
             </div>
         </div>
     </section>
@@ -288,7 +271,7 @@ footer p {
                 <li>Python Programming: By ELEWAYTE</li>
                 <li>Python Basics for Data Science: By EDX</li>
                 <li>Introduction to SQL: By EDX</li>
-                <li>Introduction to Artificial Intelligence: By SIMPULEARN</li>
+                <li>Introduction to Artificial Intelligence: By SIMPLiLEARN</li>
             </ul>
         </div>
     </section>
